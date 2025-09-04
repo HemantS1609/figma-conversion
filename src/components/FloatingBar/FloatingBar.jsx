@@ -3,30 +3,42 @@ import "./FloatingBar.css";
 
 const FloatingBar = () => {
   const [visible, setVisible] = useState(false);
-  const observerRef = useRef(null);
+  const wrapperVisibleRef = useRef(false);
+  const footerVisibleRef = useRef(false);
 
   useEffect(() => {
-    const wrapperId = "wrapper-for-floating";
-    const wrapper = document.getElementById(wrapperId);
-    if (!wrapper) return;
+    const wrapper = document.getElementById("wrapper-for-floating");
+    const footer = document.getElementById("footer-comp");
+    if (!wrapper || !footer) return;
 
-    observerRef.current = new IntersectionObserver(
+    const updateVisibility = () => {
+      setVisible(wrapperVisibleRef.current && !footerVisibleRef.current);
+    };
+
+    const wrapperObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-        else setVisible(false);
+        wrapperVisibleRef.current = entry.isIntersecting;
+        updateVisibility();
       },
-      {
-        threshold: 0,
-        rootMargin: "0px 0px -80% 0px",
-      }
+      { threshold: 0, rootMargin: "0px 0px -80% 0px" }
     );
+    wrapperObserver.observe(wrapper);
 
-    observerRef.current.observe(wrapper);
+    const footerObserver = new IntersectionObserver(
+      ([entry]) => {
+        footerVisibleRef.current = entry.isIntersecting;
+        updateVisibility();
+      },
+      { threshold: 0 }
+    );
+    footerObserver.observe(footer);
 
     return () => {
-      if (observerRef.current) observerRef.current.disconnect();
+      wrapperObserver.disconnect();
+      footerObserver.disconnect();
     };
   }, []);
+
   return (
     <div className={`floating-bar ${visible ? "visible" : ""}`}>
       <div className="floating-bar-inner">
