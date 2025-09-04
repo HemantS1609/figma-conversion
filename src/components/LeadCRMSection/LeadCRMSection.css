@@ -1,0 +1,162 @@
+.leadcrm-section {
+  position: relative;
+  padding: 60px 20px;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 40px;
+}
+
+.text-content {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.heading-with-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading-with-icon img {
+  max-width: 60px;
+  height: auto;
+}
+
+.text-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #090f4e;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text-content p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #4d4d4d;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.lead-cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 13px;
+  background-color: #b3fc6a;
+  box-shadow: 0px 8px 24px 0px #959da533;
+  color: #242424;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 500px;
+  border-radius: 10px;
+}
+
+.side-image {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  width: 115px;
+  height: auto;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.cmt-15 {
+  margin-top: 15px;
+}
+.cmb-85 {
+  margin-bottom: 85px;
+}
+
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+
+  .content-wrapper {
+    gap: 30px;
+  }
+
+  .text-content h2 {
+    font-size: 30px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .lead-cta-button {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .side-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 13px;
+  }
+
+  .lead-cta-button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .main-image {
+    max-width: 90%;
+  }
+}

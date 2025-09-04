@@ -1,0 +1,32 @@
+.feature-slider-section {
+  padding: 2rem 0;
+  /* background-color: hsl(0, 0%, 98%); */
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.feature-item {
+  padding: 0 10px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #090f4e;
+}
+.feature-title .bold-text {
+  font-weight: 600;
+}

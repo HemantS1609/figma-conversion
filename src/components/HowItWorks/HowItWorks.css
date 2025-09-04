@@ -1,0 +1,223 @@
+.how-it-works {
+  padding: 40px;
+  background: #eaeffa;
+  position: relative;
+  border-radius: 20px;
+}
+
+.how-it-works h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #090f4e;
+}
+
+.how-it-works p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin-bottom: 44px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  background-image: url("https://img.leadcrm.io/wp-content/uploads/2025/07/11073001/Frame-1171278422-1-1.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 92% auto;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+.step-number {
+  color: #2d96bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 114px;
+  font-family: "Sriracha", Sans-serif;
+  line-height: 100px;
+}
+
+.step-card h3 {
+  color: #090f4e;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.step-card p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.step-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+
+.cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-btn {
+  width: 296px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  background: #b3fc6a;
+  box-shadow: 0px 8px 24px 0px #959da533;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.decorative-ball {
+  position: absolute;
+  right: 40px;
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Tablet: ≤1024px */
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 30px 20px;
+  }
+
+  .how-it-works h2 {
+    font-size: 32px;
+  }
+
+  .how-it-works p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .step-number {
+    font-size: 90px;
+    line-height: 80px;
+  }
+
+  .step-card h3 {
+    font-size: 22px;
+  }
+
+  .step-card p {
+    font-size: 15px;
+  }
+
+  .cta-btn {
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .decorative-ball {
+    width: 60px;
+    right: 20px;
+  }
+}
+
+/* Mobile: ≤768px */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-size: 100% auto;
+  }
+
+  .step-number {
+    font-size: 72px;
+    line-height: 60px;
+  }
+
+  .step-card h3 {
+    font-size: 20px;
+  }
+
+  .step-card p {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 220px;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .decorative-ball {
+    width: 50px;
+    right: 10px;
+  }
+}
+
+/* Small Mobile: ≤480px */
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 20px 15px;
+  }
+
+  .how-it-works h2 {
+    font-size: 26px;
+  }
+
+  .how-it-works p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .step-number {
+    font-size: 60px;
+    line-height: 50px;
+  }
+
+  .step-card h3 {
+    font-size: 18px;
+  }
+
+  .step-card p {
+    font-size: 13px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .decorative-ball {
+    width: 40px;
+    right: 5px;
+  }
+}
