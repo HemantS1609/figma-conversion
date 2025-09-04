@@ -91,3 +91,8 @@
   font-weight: 600;
   color: #161616;
 }
+@media (max-width: 1024px) {
+  .floating-bar {
+    display: none;
+  }
+}
